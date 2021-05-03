@@ -187,7 +187,7 @@ def main():
         while True:
             a = input(('\nWould you like to see rows {} to {} of raw data? Please enter yes/no to continue. \n').format(A,B))
             if a=="yes":
-                print (df.iloc[A:B])
+                calc_rows(df, A, B)
                 A=A+5
                 B=B+5
                 continue
@@ -197,6 +197,9 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+
+def calc_rows(df, A, B):
+    print (df.iloc[A:B])
 
 if __name__ == "__main__":
     main()
