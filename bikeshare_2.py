@@ -137,7 +137,7 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
-    total = df['Trip Duration'].sum()
+    total = travel_time(df)
 
     # TO DO: display mean travel time
     average = df['Trip Duration'].mean()
@@ -146,6 +146,10 @@ def trip_duration_stats(df):
     print('-'*40)
     print("Total travel time is: \n>", total)
     print("Average travel time is: \n>", average)
+
+def newmethod9(df):
+    total = df['Trip Duration'].sum()
+    return total
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
