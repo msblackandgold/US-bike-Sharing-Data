@@ -181,7 +181,14 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-                 
+
+    """
+    Asks user if they would like to see lines of raw data to analyze.
+
+    Returns:
+        5 lines of raw data for each yes response.
+        Loop breaks when no is entered.
+    """         
         A=0
         B=5
         while True:
